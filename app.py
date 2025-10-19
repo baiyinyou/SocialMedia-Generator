@@ -2,12 +2,12 @@
 import streamlit as st
 from main import run_pipeline
 
-st.set_page_config(page_title="Insight Helper", page_icon="📝", layout="wide")
-st.title("📝Insight Helper — Vision + Text RAG")
+st.set_page_config(page_title="MultimodalSocialMedia-Generator", page_icon="📝", layout="wide")
+st.title("📝SocialMedia Generator")
 
 with st.sidebar:
     st.header("Configuration")
-    langs = st.multiselect("Output Languages", ["zh", "en", "sv"], default=["zh", "en"])
+    langs = st.multiselect("Output Languages", ["zh", "eng", "swe"], default=["zh", "eng","swe"])
     persona = st.selectbox("Persona", ["Professional", "Concise", "Analytical", "Friendly"], index=0)
     platform_target = st.selectbox("Platform", ["LinkedIn", "X/Twitter", "Short Video Script"], index=0)
     add_hashtags = st.checkbox("Add Hashtags", True)
@@ -18,9 +18,9 @@ with st.sidebar:
 st.subheader("① Provide Inputs")
 img_files = st.file_uploader("Upload screenshots / charts", type=["png", "jpg", "jpeg"], accept_multiple_files=True)
 urls_text = st.text_area("Paste article links")
-topic_hint = st.text_input("Optional topic hint", "Retrieval-Augmented Generation")
+topic_hint = st.text_input("Optional topic hint", " ")
 
-if st.button("✨ Generate Insights"):
+if st.button("Generate Insights"):
     if mode == "Online Search":
         from online_retriever import build_online_vectorstore
         with st.spinner("Searching online sources..."):

@@ -10,7 +10,7 @@ def run_pipeline(img_files, urls_text, langs, persona, platform_target,
 
     blobs = []
 
-    with st.spinner("📷 Extracting from images and URLs..."):
+    with st.spinner("Extracting from images and URLs..."):
         if img_files:
             for f in img_files:
                 blobs.append(ocr_image(f))
@@ -21,10 +21,10 @@ def run_pipeline(img_files, urls_text, langs, persona, platform_target,
         st.warning("Please provide at least one image or URL.")
         return
 
-    with st.spinner("🧹 Cleaning text..."):
+    with st.spinner("Cleaning text..."):
         blobs = clean_texts_pipeline(blobs)
 
-    with st.spinner("🔎 Building multimodal vectorstore..."):
+    with st.spinner("Building multimodal vectorstore..."):
         vs = build_rag_model(blobs, img_files)
 
     query = topic_hint or "Summarize key insights for professionals"

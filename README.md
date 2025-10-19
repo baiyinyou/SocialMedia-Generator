@@ -1,4 +1,4 @@
-# Multimodal Social Media Insight Generator — Vision + Text RAG
+# Multimodal-SocialMedia-Generator
 
 ## 1. Overview
 
@@ -182,7 +182,7 @@ If you use this project in academic or applied research, please cite:
 ```
 @software{linkedinsight2025,
   title = {Multimodal LinkedIn Insight Generator — Vision + Text RAG},
-  author = {Zhuruiying, Baiyin},
+  author = {Baiyinyou},
   year = {2025},
   url = {https://github.com/<your_username>/Multimodal-LinkedIn-Insight-Generator}
 }
