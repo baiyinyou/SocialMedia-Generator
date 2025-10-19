@@ -1,0 +1,14 @@
+streamlit
+pytesseract
+Pillow
+requests
+trafilatura
+langchain
+langchain_groq
+langchain_community
+sentence-transformers
+chromadb
+torch
+transformers
+faiss-cpu
+numpy<2.0
